@@ -96,7 +96,7 @@ If the windows machine is behind a firewall, then we need to open port range (23
 
 2. On the Windows machine, traverse to PSLF wrapper directory. Update the broker address and PSLF federate address in pslf_helics_config.json config file.
 
-3. Start PSLF-HELICS integrated steady state simulation code
+3. Specify the correct broker and PSLF federate addresses in pslf_helics_config.json. Start PSLF-HELICS to simulate steady state power flow simulation
     ```sh
         python pslf_wrapper.py
     ```
