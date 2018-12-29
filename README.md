@@ -78,7 +78,7 @@ Please follow instructions in https://gmlc-tdc.github.io/HELICS-src/installation
 
 PSLF integrated with HELICS should run on the Windows machine and HELICS broker and GridLAB-D integrated with HELICS should run on the Linux machine.
 
-<img src="images/multi-machine.png" width=100>
+<img src="images/multi-machine.png">
 
 If the windows machine is behind a firewall, then we need to open port range (23400 – 23700) to enable incoming traffic from Linux machine. 
 
