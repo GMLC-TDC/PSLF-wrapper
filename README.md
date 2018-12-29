@@ -83,10 +83,15 @@ PSLF integrated with HELICS should run on the Windows machine and HELICS broker 
 If the windows machine is behind a firewall, then we need to open port range (23400 – 23700) to enable incoming traffic from Linux machine. 
 
 1. Add inbound rule for port range 23400 - 23700 on your windows machine
+
     a. Go to Control Panel->Windows Firewall ->Advanced settings ->Inbound Rules->New Rule
+
     b. Set Protocol type as TCP
+
     c. Set port range as 23400 – 23700
+
     d. Call IT helpdesk to open port range
+
     e. Restart computer for the changes get reflected
 
 2. On the Windows machine, traverse to PSLF wrapper directory. Update the broker address and PSLF federate address in pslf_helics_config.json config file.
@@ -101,10 +106,20 @@ If the windows machine is behind a firewall, then we need to open port range (23
         helics_broker 2 --log-level=3 --name=mainbroker --interface=tcp://<local IP>:23404
     ```
 
-5. We need to ensure that GridLabD and PSLF connect to the same broker IP and port number. Core init string parameter for federate
+5. For this use case, we have used 700 bus transmission system through PSLF and a feeder model in GridLAB-D with detailed house appliances and HVACs. Follow instructions as described in https://github.com/GMLC-TDC/HELICS-Tutorial/tree/master/tutorials/1-DistributionFederation-ManualStart with few modifications. 
+ 
+    a. Since it is multi-machine setup, we need to provide broker address when starting the HELICS broker.
+
+    ```sh
+            helics_broker 2 --log-level=3 --name=mainbroker --interface=tcp://<local IP>:23404
+    ``` 
+
+    b. Modify the "core_init_string" in https://github.com/GMLC-TDC/HELICS-Tutorial/blob/master/test_system_data/gldFeeders/B2/G_1/DistributionSim_B2_G_1.json
+
 	```sh
         “--federates=1 --broker_address=tcp://<broker ip> --interface=tcp://<local ip>”
     ```
+This ensures that both PSLF and GridLAB-D example connect to the same broker address.
 
 
 
