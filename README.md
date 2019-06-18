@@ -27,7 +27,7 @@ PSLF tool is supported only in Windows so we will need to install HELICS on Wind
 
 ## HELICS installation on Windows
 
-Follow the instructions for HELICS installation on Windows as per https://gmlc-tdc.github.io/HELICS-src/installation/windows.html. In addition to this, here are few steps that we need to take care of specific to PSLF integration. PSLF works with 32 bit version of python so we need to ensure that Miscrosoft Visual Studio, boost libraries, and python are 32 bit versions. 
+Follow the instructions for HELICS installation on Windows as per https://helics.readthedocs.io/en/latest/installation/windows.html. In addition to this, here are few steps that we need to take care of specific to PSLF integration. PSLF works with 32 bit version of python so we need to ensure that Miscrosoft Visual Studio, boost libraries, and python are 32 bit versions. 
 
 1. Install Boost Pre-built library 1.66 (32 version) needed by HELICS. Pre-built libraries are available in  https://dl.bintray.com/boostorg/release/1.66.0/binaries/. Please make sure “BOOST_INSTALL_PATH” environment variable is set to the location where boost is installed.
 
@@ -53,7 +53,7 @@ Follow the instructions for HELICS installation on Windows as per https://gmlc-t
 
 ## HELICS installation on Linux
 
-Please follow instructions in https://gmlc-tdc.github.io/HELICS-src/installation/linux.html to install HELICS on Linux. Add additional CMAKE flag during the configuration step.
+Please follow instructions in https://helics.readthedocs.io/en/latest/installation/linux.html to install HELICS on Linux. Add additional CMAKE flag during the configuration step.
 
 ```sh
     CMAKE_CXX_FLAGS = -fPIC -std=c++14
