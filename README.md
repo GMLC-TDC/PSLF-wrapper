@@ -38,13 +38,13 @@ Follow the instructions for HELICS installation on Windows as per https://helics
 
 3. Download HELICS source code 
 ```sh
-    git clone https://github.com/GMLC-TDV/HELICS-src.git
+    git clone https://github.com/GMLC-TDC/HELICS.git
 ```
 
 4. We will have to build HELICS with python 2.7 support. Open "x86 Native Tools Command Prompt VS 2017" command prompt fron Windows start menu.
 
 ```sh
-    cd path/to/HELICS-src
+    cd path/to/HELICS
     mkdir build
     cd build
     cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="C:\local\helics-v1.3.0" -	DBOOST_ROOT="C:\local\boost_1_66_1" -DBUILD_PYTHON2_INTERFACE=ON -G "Visual Studio 15 2017" ..
